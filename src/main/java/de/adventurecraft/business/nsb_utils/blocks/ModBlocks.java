@@ -19,7 +19,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CRACKED_STONE = registerBlock("cracked_stone",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2, 6).sound(SoundType.STONE)));
+                    .strength(2, 6).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

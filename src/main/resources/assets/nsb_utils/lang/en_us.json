@@ -1,5 +1,9 @@
 {
   "item.nsb_utils.stone_crook": "Stone Crook",
   "item.nsb_utils.stone_stick": "Stone Stick",
-  "block.nsb_utils.cracked_stone": "Cracked Stone"
+
+  "block.nsb_utils.cracked_stone": "Cracked Stone",
+
+  "creativetab.nsbutils.nsb_utils_items": "NSB Utils Items",
+  "creativetab.nsbutils.nsb_utils_blocks": "NSB Utils Blocks"
 }

@@ -2,6 +2,7 @@ package de.adventurecraft.business.nsb_utils;
 
 import com.mojang.logging.LogUtils;
 import de.adventurecraft.business.nsb_utils.blocks.ModBlocks;
+import de.adventurecraft.business.nsb_utils.items.ModCreativeModeTabs;
 import de.adventurecraft.business.nsb_utils.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -37,10 +38,10 @@ public class Nsb_utils {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -48,19 +49,6 @@ public class Nsb_utils {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        // Creative Tab Items
-        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.CROOK);
-            event.accept(ModItems.STICK);
-        }
-        // Creative Tab Blocks
-        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(ModBlocks.CRACKED_STONE);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

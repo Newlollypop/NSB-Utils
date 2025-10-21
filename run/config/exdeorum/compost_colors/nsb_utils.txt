@@ -1,0 +1,3 @@
+// Compost colors for nsb_utils. You may add your own colors, change existing ones, or remove colors that aren't needed.
+stone_crook, #ffffff
+stone_stick, #5a9497
