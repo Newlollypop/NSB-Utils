@@ -1,6 +1,7 @@
 package de.adventurecraft.business.nsb_utils;
 
 import com.mojang.logging.LogUtils;
+import de.adventurecraft.business.nsb_utils.items.Moditems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -51,6 +52,8 @@ public class Nsb_utils {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        Moditems.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -64,7 +67,10 @@ public class Nsb_utils {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(Moditems.CROOK);
+            event.accept(Moditems.STICK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
