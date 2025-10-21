@@ -59,6 +59,12 @@
     "entity": true,
     "entity_variant": true
   },
+  "exdeorum": {
+    "infested_leaves": true,
+    "barrel": true,
+    "crucible": true,
+    "sieve": true
+  },
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,
