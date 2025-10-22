@@ -25,7 +25,7 @@ renderClouds:"true"
 renderDistance:12
 simulationDistance:12
 screenEffectScale:1.0
-soundDevice:"OpenAL Soft on QG241Y P (NVIDIA High Definition Audio)"
+soundDevice:""
 autoJump:false
 operatorItemsTab:false
 autoSuggestions:true

@@ -1,0 +1,8 @@
+/enchant Dev minecraft:silk_touch
+/enchant Dev minecraft:silk_touch 0
+/enchant Dev minecraft:fortune 1
+/enchant Dev minecraft:fortune 2
+/enchant Dev minecraft:fortune 3
+/data get storage exdeorum
+/data get storage exdeorum:crook
+/data get entity Dev
