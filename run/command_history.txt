@@ -6,3 +6,4 @@
 /data get storage exdeorum
 /data get storage exdeorum:crook
 /data get entity Dev
+/time set day
