@@ -44,18 +44,19 @@ public class BlockBreakEventHandler {
 
             event.setCanceled(true);
 
-
             BlockPos pos = event.getPos();
             RandomSource random = level.getRandom();
 
-
             int dropCount = random.nextInt(4) + 2;
-
 
             for (int i = 0; i < dropCount; i++) {
                 Item randomSapling = SAPLINGS.get(random.nextInt(SAPLINGS.size()));
                 Block.popResource(level, pos, new ItemStack(randomSapling));
             }
+
+            level.destroyBlock(pos, false);
         }
+
     }
 }
+
