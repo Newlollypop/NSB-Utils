@@ -1,6 +1,7 @@
 package de.adventurecraft.business.nsb_utils.items;
 
 import de.adventurecraft.business.nsb_utils.Nsb_utils;
+import de.adventurecraft.business.nsb_utils.items.custom.CrookItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -10,7 +11,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Nsb_utils.MODID);
 
     public static final DeferredItem<Item> CROOK = ITEMS.register("stone_crook",
-            () -> new Item(new Item.Properties()));
+            () -> new CrookItem(new Item.Properties().durability(256)));
 
     public static final DeferredItem<Item> STICK = ITEMS.register("stone_stick",
             () -> new Item(new Item.Properties()));
