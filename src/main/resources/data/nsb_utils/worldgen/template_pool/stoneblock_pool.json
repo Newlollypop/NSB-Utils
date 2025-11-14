@@ -1,0 +1,16 @@
+{
+  "name": "nsb_utils:stoneblock",
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "nsb_utils:stoneblock",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

@@ -7,3 +7,16 @@
 /data get storage exdeorum:crook
 /data get entity Dev
 /time set day
+/gamerule doDaylightCycle false
+/gamerule doWeatherCycle false
+/fill -1 65 11 -9 65 19 stone
+/fill -9 66 19 -1 66 11 stone
+/fill 0 66 11 0 57 19 stone
+/fill 0 57 20 -9 66 20 stone
+/fill -10 66 20 -10 57 11 stone
+/fill -10 57 10 0 66 10 stone
+/ftbteambases create
+/ftbteambases lobby
+/ftbteambases create ftbteambases:default_jigsaw
+/ftbteams party leave
+/ftbteambases lobby
